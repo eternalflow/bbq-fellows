@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}View Event{% endblock %}
+
+{% block head_links %}{{form.media}}{% endblock %}
+
+{% block content %}
+    {% if event %}
+        {% if event.user_is_host %}
+            Congratulations. You're the host of this event. <br />
+            Invite URL: {{ event.link }} <br />
+        {% else %}
+            <div class="row justify-content-center">
+                <div class="col-sm-6 text-center">
+                    <p>You're invited to BBQ Event by {{ event.hosted_by }} at {{ event.date }}</p>
+                </div>
+            </div>
+            <form method=post>
+                {% csrf_token %}
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        {% bootstrap_form form %}
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-sm-4">
+                        {% buttons %}
+                            {% bootstrap_button "I will be there!" button_type="submit" button_class="btn-primary" %}
+                        {% endbuttons %}
+                    </div>
+                </div>
+            </form>
+        {% endif %}
+        <br />
+    {% else %}
+        <p>Event not found</p>
+    {% endif %}
+{% endblock %}

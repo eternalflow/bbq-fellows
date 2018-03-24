@@ -1,0 +1,26 @@
+[
+  {
+    "model": "bbqproducts.bbqproduct",
+    "pk": 1,
+    "fields": {
+      "type_name": "Meat",
+      "name": "Pork"
+    }
+  },
+  {
+    "model": "bbqproducts.bbqproduct",
+    "pk": 2,
+    "fields": {
+      "type_name": "Meat",
+      "name": "Beef"
+    }
+  },
+  {
+    "model": "bbqproducts.bbqproduct",
+    "pk": 3,
+    "fields": {
+      "type_name": "Meat",
+      "name": "Chicken"
+    }
+  }
+]

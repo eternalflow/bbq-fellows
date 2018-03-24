@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Login{% endblock %}
+
+{% block pagetitle %}
+Login to organize a BBQEvent
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            {% bootstrap_form form layout='inline' %}
+        </div>
+    </div>
+    <div class="row text-center justify-content-center">
+        <div class="col-sm-4">
+            {% buttons %}
+                {% bootstrap_button "Login" button_type="submit" button_class="btn-primary" %}
+            {% endbuttons %}
+        </div>
+    </div>
+  </form>
+{% endblock %}

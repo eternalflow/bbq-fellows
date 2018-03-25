@@ -6,3 +6,4 @@ pytest-mock==1.7.1
 gunicorn
 dj-database-url
 psycopg2
+whitenoise

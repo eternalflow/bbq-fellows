@@ -20,3 +20,4 @@ pytest-mock==1.7.1
 pytest==3.5.0             # via pytest-django, pytest-mock
 pytz==2018.3              # via django
 six==1.11.0               # via more-itertools, pytest
+whitenoise==3.3.1

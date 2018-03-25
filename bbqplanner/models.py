@@ -15,5 +15,5 @@ class BBQEvent(models.Model):
 class BBQEventVisitor(models.Model):
     name = models.CharField(max_length=40)
     event = models.ForeignKey(BBQEvent, on_delete=models.CASCADE, related_name='visitors')
-    guests_count = models.IntegerField(default=0)
+    guests_count = models.PositiveIntegerField(default=0)
     desired_products = models.ManyToManyField('bbqproducts.BBQProduct')
